@@ -1,0 +1,139 @@
+﻿@model PGMCLIP.ViewModels.PersonaVM
+@{
+    ViewBag.Title = "Registro de Usuario";
+    Layout = "~/Views/Shared/_Layout-Login.cshtml";
+
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
+}
+
+<html>
+<head>
+    <title>Actualizar Datos</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="~/Sources/images/Update-pana.png" alt="Imagen decorativa de una actualización" style="margin-top:30%">
+                </div>
+
+                @using (Html.BeginForm())
+                {
+            <form class="login100-form validate-form" id="Registro">
+                <span class="login100-form-title">
+                    <h1>Actualizar datos <br /> @ViewBag.nombrePersonaVM</h1>
+                </span>
+
+                <label for="idPersona" class="txt2">Persona ID</label>
+                <div class="wrap-input100 validate-input" data-validate="Ingrese un usuario">
+                    @Html.TextBoxFor(model => model.id_persona, htmlAttributes: new { @class = "input100 second", type = "text", @id = "id_persona", name = "id_persona", placeholder = "id_persona", @readonly = "true" })
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+
+                <label for="usuario" class="txt2">Usuario</label>
+                <div class="wrap-input100 validate-input" data-validate="Ingrese un usuario">
+                    @Html.TextBoxFor(model => model.usuario, htmlAttributes: new { @class = "input100 second", type = "text", @id = "usuario", name = "usuario", placeholder = "usuario", oninvalid = "this.setCustomValidity('Ingrese un usuario')", oninput = "setCustomValidity('')" })
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <label for="nombrePersona" class="txt2">Nombre</label>
+                <div class="wrap-input100 validate-input" data-validate="Ingrese un nombre">
+                    @Html.TextBoxFor(model => model.nombre, htmlAttributes: new { @class = "input100 second", type = "text", @id = "nombrePersona", name = "nombre", placeholder = "nombre", oninvalid = "this.setCustomValidity('Ingrese un nombre')", oninput = "setCustomValidity('')" })
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <label for="apellidoPersona" class="txt2">Apellido</label>
+                <div class="wrap-input100 validate-input" data-validate="Ingrese un apellido">
+                    @Html.TextBoxFor(model => model.apellido, htmlAttributes: new { @class = "input100 second", type = "text", @id = "apellidoPersona", name = "apellido", placeholder = "apellido", oninvalid = "this.setCustomValidity('Ingrese un apellido')", oninput = "setCustomValidity('')" })
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+
+
+
+                <label for="emailPersona" class="txt2">Email</label>
+                <div class="wrap-input100 validate-input" data-validate="Ingrese un email">
+                    @Html.TextBoxFor(model => model.email, htmlAttributes: new { @class = "input100 second", type = "text", @id = "emailPersona", name = "email", placeholder = "email", oninvalid = "this.setCustomValidity('Ingrese un email')", oninput = "setCustomValidity('')" })
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+                @if (Model.id_persona==0)
+                {
+                    <span class="focus-input100"></span>
+                    <div class="container-login100-form-btn" hidden>
+                        <input type="submit" class="login100-form-btn" value="Actualizar datos" :focus>
+
+                    </div>
+                }
+                else
+                {
+                    <span class="focus-input100"></span>
+                    <div class="container-login100-form-btn">
+                        <input type="submit" class="login100-form-btn" value="Actualizar datos" :focus>
+
+                    </div>
+                }
+
+                <div class="text-center p-t-50">
+                    <a class="txt1" href="#" title="Página Principal" aria-label="Página Principal">
+                        @Html.ActionLink("Ayuda", "ListadoPersonas", "Usuario")
+
+                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+
+
+                <div class="text-center p-t-50">
+                    <a class="txt1" href="#" title="Página Principal" aria-label="Página Principal">
+                        @Html.ActionLink("Volver al listado de personas", "ListadoPersonas", "Usuario")
+
+                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </form>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!--===============================================================================================-->
+    <script src="~/Sources/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Sources/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Sources/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Sources/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Sources/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="~/Sources/js/main.js"></script>
+
+</body>
+</html>

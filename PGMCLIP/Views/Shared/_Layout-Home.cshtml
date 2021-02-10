@@ -1,0 +1,114 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="~/Sources/images/icons/favicon.ico" />
+
+    <!-- /meta tags -->
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="~/SourcesHome/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/SourcesHome/css/owl.theme.default.min.css">
+    <!-- /Owl Stylesheets -->
+    <!-- gallery css -->
+    <link href="~/SourcesHome/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <!-- font awesome css -->
+    <link href="~/SourcesHome/css/fontawesome-all.css" type="text/css" rel="stylesheet" media="all" />
+    <!-- bootstrap css -->
+    <link href="~/SourcesHome/css/bootstrap.css" type="text/css" rel="stylesheet" media="all" />
+    <!-- custom css -->
+    <link href="~/SourcesHome/css/style.css" type="text/css" rel="stylesheet" media="all" />
+    <!-- Online google fonts -->
+    <link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+          rel="stylesheet">
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark bg-light navbar-fixed-top navbar-inner">
+            <a class="navbar-brand ligh" href="~/Home/Index">Sarasa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" onclick="window.location.href = '@Url.Action("Index", "Home")'" title="Inicio" aria-label="Inicio" style="cursor:pointer">
+
+                            Inicio
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    @if (Request.Cookies["usuario"] == null)
+                    {
+                        <li class="nav-item ml-xl-2">
+                            <a class="nav-link scroll" onclick="window.location.href = '@Url.Action("RegistroUsuario", "Usuario")'" title="Registrarse" aria-label="Registrarse" style="cursor:pointer">
+                                Registrarse
+                            </a>
+                        </li>
+                        <li class="nav-item ml-xl-2">
+                            <a class="nav-link scroll" onclick="window.location.href = '@Url.Action("InicioSesion", "Usuario")'" title="Iniciar Sesión" aria-label="Iniciar Sesión" style="cursor:pointer">
+                                Inicio Sesión
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item ml-xl-2">
+                            <a class="nav-link scroll" onclick="window.location.href = '@Url.Action("ListadoPersonas", "Usuario")'" title="Listado de personas" aria-label="Listado de personas" style="cursor:pointer">
+                                Listado Personas
+                            </a>
+                        </li>
+                        <li class="nav-item ml-xl-2">
+                            <a class="nav-link scroll" onclick="window.location.href = '@Url.Action("ActualizarDatos", "Usuario",  new { @id_persona = 0 })'", title="Actualizar Persona" aria-label="Actualizar Persona" style="cursor:pointer">
+                                Actualizar Persona
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown ml-xl-2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false" title="Reportes" aria-label="Reportes">
+                                Configuracion
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item scroll" onclick="window.location.href = '@Url.Action("ListadoParametros", "Configuracion")'" title="Listado de parametros" aria-label="Listado de parametros" style="cursor:pointer">Configuracion Datos Municipalidad</a>
+                                <a class="dropdown-item scroll" href="#section6">Sarasa</a>
+                                <a class="dropdown-item scroll" href="#section7">Sarasa</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="typography.html">Sarasa</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item ml-xl-2">
+                            <a class="nav-link scroll" onclick="window.location.href = '@Url.Action("CerrarSesion", "Usuario")'" title="Cerrar Sesión" aria-label="Cerrar Sesión" style="cursor:pointer">Cerrar Sesión</a>
+
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    @RenderBody()
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

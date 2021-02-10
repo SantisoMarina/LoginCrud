@@ -1,0 +1,159 @@
+﻿@model PGMCLIP.Models.Usuario
+@using PGMCLIP.ViewModels
+@{
+    ViewBag.Title = "Registro de Usuario";
+    Layout = "~/Views/Shared/_Layout-Login.cshtml";
+
+    List<ProvinciaItemVM> items = (List<ProvinciaItemVM>)ViewBag.items;
+}
+
+<html>
+<head>
+    <title>Registro de usuario</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript">
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31
+                && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+    </script>
+
+    <!--===============================================================================================-->
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="~/Sources/images/Digital nomad-pana.png" alt="Imagen decorativa de una persona con una computadora" style="margin-top:30%">
+                </div>
+                @using (Html.BeginForm())
+                {
+                    <form class="login100-form validate-form" id="Registro">
+                        <span class="login100-form-title">
+                            <h1>Registro de usuario</h1>
+                        </span>
+
+                        <label for="usuario" class="txt2">Usuario</label>
+                        <div class="wrap-input100 validate-input" data-validate="Ingrese un usuario">
+                            @Html.TextBoxFor(model => model.usuario, htmlAttributes: new { @class = "input100 second", type = "text", @id = "usuario", name = "usuario", placeholder = "usuario", oninvalid = "this.setCustomValidity('Ingrese un usuario')", oninput = "setCustomValidity('')" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+                        <label for="password" class="txt2">Contraseña</label>
+                        <div class="wrap-input100 validate-input" data-validate="Ingrese un contraseña">
+                            @Html.PasswordFor(model => model.password, htmlAttributes: new { @class = "input100", type = "password", @id = "password", name = "password", placeholder = "contraseña", oninvalid = "this.setCustomValidity('Ingrese una contraseña')", oninput = "setCustomValidity('')" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+                        <label for="nombrePersona" class="txt2">Nombre</label>
+                        <div class="wrap-input100 validate-input" data-validate="Ingrese un nombre">
+                            @Html.TextBoxFor(model => model.persona.nombre, htmlAttributes: new { @class = "input100 second", type = "text", @id = "nombrePersona", name = "nombre", placeholder = "nombre", oninvalid = "this.setCustomValidity('Ingrese un nombre')", oninput = "setCustomValidity('')" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-info" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+                        <label for="apellidoPersona" class="txt2">Apellido</label>
+                        <div class="wrap-input100 validate-input" data-validate="Ingrese un apellido">
+                            @Html.TextBoxFor(model => model.persona.apellido, htmlAttributes: new { @class = "input100 second", type = "text", @id = "apellidoPersona", name = "apellido", placeholder = "apellido", oninvalid = "this.setCustomValidity('Ingrese un apellido')", oninput = "setCustomValidity('')" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-info" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+
+                        <label for="fechaNacPersona" class="txt2">Fecha de Nacimiento</label>
+                        <div class="wrap-input100 validate-input" data-validate="Ingrese una fecha de nacimiento">
+                            @Html.TextBoxFor(model => model.persona.fecha_nacimiento, htmlAttributes: new { @class = "input100 second", type = "date", @id = "fechaNacPersona", name = "fechaNacimiento", placeholder = "fecha de nacimiento", oninvalid = "this.setCustomValidity('Ingrese una fecha de nacimiento')", oninput = "setCustomValidity('')" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+                        <label for="emailPersona" class="txt2">Email</label>
+                        <div class="wrap-input100 validate-input" data-validate="Ingrese un email">
+                            @Html.TextBoxFor(model => model.persona.email, htmlAttributes: new { @class = "input100 second", type = "text", @id = "emailPersona", name = "email", placeholder = "email", oninvalid = "this.setCustomValidity('Ingrese un email')", oninput = "setCustomValidity('')" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+                        <label for="telefonoPersona" class="txt2">Telefono</label>
+                        <div class="wrap-input100 validate-input" data-validate="Ingrese un teléfono">
+                            @Html.TextBoxFor(model => model.persona.telefono, htmlAttributes: new { @class = "input100 second", type = "text", @id = "telefonoPersona", name = "telefono", placeholder = "telefono", onkeypress = "return isNumberKey(event)", oninvalid = "this.setCustomValidity('Ingrese un teléfono')", oninput = "setCustomValidity('')" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+                        <label for="provinciaPersona" class="txt2">Provincia</label>
+                        <div class="wrap-input100 validate-input" data-validate="Ingrese una provincia">
+                            @Html.DropDownListFor(model => model.persona.id_provincia, new SelectList(items,"id_provincia","provincia"), "seleccione una provincia", htmlAttributes: new { @class = "input100 second", required = "required", id = "provinciaPersona" })
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+
+                        <span class="focus-input100"></span>
+                        <div class="container-login100-form-btn">
+                            <input type="submit" class="login100-form-btn" value="Registrar usuario" :focus>
+                        </div>
+
+
+
+                        <div class="text-center p-t-50">
+                            <a class="txt1" href="#" title="Inicio de sesión" aria-label="Inicio de sesión">
+                                @Html.ActionLink("Acceder al inicio de sesión", "InicioSesion", "Usuario")
+
+                                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="~/Sources/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Sources/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Sources/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Sources/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Sources/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="~/Sources/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+﻿@model IEnumerable<PGMCLIP.Models.ParametroConfiguracion>
+@{
+    ViewBag.Title = "ListadoParametros";
+    Layout = "~/Views/Shared/_Layout-Home.cshtml";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Listado de Parametros</title>
+
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/SourcesHome/vendor/bootstrap/css/bootstrap.min.css">
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/SourcesHome/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/SourcesHome/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/SourcesHome/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/SourcesHome/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/SourcesHome/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/SourcesHome/css/main.css">
+
+    <!--===============================================================================================-->
+
+    <script>
+        function ShowMessage() {
+            var result = confirm("Do your want to submit form?");
+            if (result) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    @if (Request.Cookies["usuario"] == null)
+    {
+        <div class="container-table100 mt-5">
+            <button type="button" class="btn-grad text-center" onclick="window.location.href = '@Url.Action("InicioSesion", "Usuario")';">NO PUEDE VER ESTO SI NO INICIA SESIÓN</button>
+        </div>
+    }
+    else
+    {
+
+
+
+        <div class="container-table100 mt-5">
+
+
+
+
+            <div class="wrap-table100 mt-5">
+
+                <div class="table100">
+
+                    <table>
+                        <thead>
+                            <tr class="table100-head">
+                                <th class="column1">Código Parámetro</th>
+                                <th class="column2">Nombre</th>
+                                <th class="column3">Valor</th>
+                                <th class="column4">Habilitado</th>
+                                <th class="column6">Modificar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var parametro in Model)
+                            {
+                            <tr>
+                                <td class="column1">@parametro.codigo_parametro</td>
+                                <td class="column2">@parametro.nombre</td>
+                                <td class="column3">@parametro.valor</td>
+                                <td class="column5">@(parametro.habilitado?"Habilitado":"No Habilitado")</td>
+                             
+                                <td class="column7 text-center">
+                                    <a href="@Url.Action("ActualizarParametros","Configuracion", new { @codigo_parametro = parametro.codigo_parametro })"><img src="~/SourcesHome/images/pencil.png" /></a>
+
+                                </td>
+                            </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                    <br />
+                  
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    }
+</body>
+
+
+<!-- Footer -->
+<footer id="footer">
+
+
+    <div class="w3l-copynote py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        &copy; 2020. Universe. All rights reserved | Design by
+                        <a href="http://w3layouts.com">W3layouts</a>
+                    </p>
+                </div>
+                <!-- /.col-md-12 -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.copynote -->
+
+
+</footer>
+<!-- /.footer -->
+
+<script src="~/SourcesHome/js/jquery-3.2.1.min.js"></script>
+<script src="~/SourcesHome/js/index.js"></script>
+<!-- stats -->
+<script src="~/SourcesHome/js/jquery.waypoints.min.js"></script>
+<script src="~/SourcesHome/js/jquery.countup.js"></script>
+
+<!-- owl carousel -->
+<script src="~/SourcesHome/js/owl.carousel.js"></script>
+
+<!-- start-smooth-scrolling -->
+<script src="~/SourcesHome/js/move-top.js"></script>
+<script src="~/SourcesHome/js/easing.js"></script>
+
+<!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
+<script src="~/SourcesHome/js/jquery-1.7.2.js"></script>
+<script src="~/SourcesHome/js/jquery.quicksand.js"></script>
+<script src="~/SourcesHome/js/script.js"></script>
+<script src="~/SourcesHome/js/jquery.prettyPhoto.js"></script>
+<!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
+
+
+<script src="~/SourcesHome/js/bootstrap.js"></script>
+<!-- video js file -->
+<script src="~/SourcesHome/js/jquery.vide.min.js"></script>
+<!-- /video js file -->
+<!-- custom js file -->
+<script src="~/SourcesHome/js/universe.js"></script>
+<!-- /custom js file -->
+<!--===============================================================================================-->
+<script src="~/SourcesHome/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/SourcesHome/vendor/bootstrap/js/popper.js"></script>
+<script src="~/SourcesHome/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/SourcesHome/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/SourcesHome/js/main.js"></script>
+
+</body>
+
+</html>

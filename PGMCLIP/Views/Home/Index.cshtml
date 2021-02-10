@@ -1,31 +1,1162 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@model PGMCLIP.Models.Usuario
+@{ Layout = "~/Views/Shared/_Layout-Home.cshtml"; }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Inicio</title>
+
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="banner">
+
+        <div id="container">
+            <div id="message">
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <!-- /banner -->
+    <!-- services grids -->
+    <section class="w3layouts-wrapper text-center py-5" id="section1">
+        <div class="container py-lg-4">
+            <header>
+                <h2>Section Heading</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+            </header>
+            <div class="w3ls-wrapper-content">
+                <div class="row pt-lg-3">
+                    <div class="agileits-s-grid col-lg-4 col-12 mt-5">
+                        <i class="fab fa-buromobelexperte icon1"></i>
+                        <h4 class="my-lg-4 my-sm-3 mt-3 mb-2">heading goes here</h4>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page
+                            when looking at its layout.
+                        </p>
+                    </div>
+                    <div class="agileits-s-grid col-lg-4 col-12 mt-sm-5 mt-5">
+                        <i class="fas fa-code icon2"></i>
+                        <h4 class="my-lg-4 my-sm-3 mt-3 mb-2">heading goes here</h4>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page
+                            when looking at its layout.
+                        </p>
+                    </div>
+                    <div class="agileits-s-grid col-lg-4 col-12 mt-5">
+                        <i class="fab fa-angular icon3"></i>
+                        <h4 class="my-lg-4 my-sm-3 mt-3 mb-2">heading goes here</h4>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page
+                            when looking at its layout.
+                        </p>
+                    </div>
+                </div>
+                <div class="row pt-lg-3">
+                    <div class="agileits-s-grid col-lg-4 col-12 mt-5">
+                        <i class="fab fa-apple icon4"></i>
+                        <h4 class="my-lg-4 my-sm-3 mt-3 mb-2">heading goes here</h4>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page
+                            when looking at its layout.
+                        </p>
+                    </div>
+                    <div class="agileits-s-grid col-lg-4 col-12 mt-5">
+                        <i class="fas fa-at icon5"></i>
+                        <h4 class="my-lg-4 my-sm-3 mt-3 mb-2">heading goes here</h4>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page
+                            when looking at its layout.
+                        </p>
+                    </div>
+                    <div class="agileits-s-grid col-lg-4 col-12 mt-5">
+                        <i class="fab fa-autoprefixer icon6"></i>
+                        <h4 class="my-lg-4 my-sm-3 mt-3 mb-2">heading goes here</h4>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page
+                            when looking at its layout.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /services grids -->
+    <!-- about -->
+    <section class="w3-about" id="section2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 wthree-abt-info">
+                    <h2>ABOUT US</h2>
+                    <p class="my-xl-4 my-lg-3 my-md-4 my-3">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in the ore recently with
+                        desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
+                    <a href="#" class="btn px-4" data-toggle="modal" data-target=".bd-example-modal-lg">READ MORE</a>
+                    <!-- Modal -->
+
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel8">Title goes here</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="card-img-top align-self-center" src="~/SourcesHome/images/abt.jpg" alt="Card image cap">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>
+                                                This is a longer card with supporting text below as a natural lead-in to additional
+                                                content. This content is a little bit longer. There are many variations of
+                                                passages of Lorem Ipsum available, but the majority have suffered alteration
+                                                in some form, by injected humour, or randomised words which don't look even
+                                                slightly believable. If you are going to use a passage of Lorem Ipsum, you
+                                                need to be sure there isn't anything embarrassing hidden in the middle of
+                                                text. All the Lorem Ipsum generators on the Internet tend to repeat predefined
+                                                chunks as necessary.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Modal -->
+                </div>
+                <div class="col-lg-6 p-0">
+                    <img src="~/SourcesHome/images/abt.jpg" alt="about-image-agileits" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /about -->
+    <!--gallery  -->
+    <section class="wthree-row w3-gallery py-sm-5 py-3" id="section3">
+        <div class="container-fluid py-md-5 py-3 py-sm-2 text-center">
+            <header>
+                <h2>Section Heading</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </header>
+            <ul class="portfolio-categ filter pt-5 pt-sm-4 mb-5 mb-sm-4 text-center">
+                <li class="port-filter all active">
+                    <a href="#">All</a>
+                </li>
+                <li class="cat-item-1">
+                    <a href="#" title="Category 1">Interior</a>
+                </li>
+                <li class="cat-item-2">
+                    <a href="#" title="Category 2">Technology</a>
+                </li>
+                <li class="cat-item-3">
+                    <a href="#" title="Category 3">Travel</a>
+                </li>
+                <li class="cat-item-4">
+                    <a href="#" title="Category 4">package</a>
+                </li>
+            </ul>
+            <ul class="portfolio-area clearfix">
+                <li class="portfolio-item2" data-id="id-0" data-type="cat-item-4">
+                    <div>
+                        <a class="image-gal" href="images/g1.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g1.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-1" data-type="cat-item-2">
+                    <div>
+                        <a class="image-gal" href="images/g2.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g2.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-2" data-type="cat-item-1">
+                    <div>
+                        <a class="image-gal" href="images/g3.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g3.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-3" data-type="cat-item-4">
+                    <div>
+                        <a class="image-gal" href="images/g4.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g4.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-4" data-type="cat-item-3">
+                    <div>
+                        <a class="image-gal" href="images/g5.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g5.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-5" data-type="cat-item-2">
+                    <div>
+                        <a class="image-gal" href="images/g6.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g6.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-6" data-type="cat-item-1">
+                    <div>
+                        <a class="image-gal" href="images/g7.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g7.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-7" data-type="cat-item-1">
+                    <div>
+                        <a class="image-gal" href="images/g8.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g8.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-9" data-type="cat-item-4">
+                    <div>
+                        <a class="image-gal" href="images/g9.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g9.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-9" data-type="cat-item-3">
+                    <div>
+                        <a class="image-gal" href="images/g10.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g10.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-10" data-type="cat-item-2">
+                    <div>
+                        <a class="image-gal" href="images/g11.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g11.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-8" data-type="cat-item-1">
+                    <div>
+                        <a class="image-gal" href="images/g12.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g12.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-9" data-type="cat-item-3">
+                    <div>
+                        <a class="image-gal" href="images/g10.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g10.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-10" data-type="cat-item-2">
+                    <div>
+                        <a class="image-gal" href="images/g1.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g1.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+                <li class="portfolio-item2" data-id="id-8" data-type="cat-item-1">
+                    <div>
+                        <a class="image-gal" href="images/g3.jpg" data-gal="prettyPhoto[gallery]">
+
+                            <img src="~/SourcesHome/images/g3.jpg" class="img-fluid w3layouts agileits" alt="">
+
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <!--end portfolio-area -->
+
+        </div>
+        <!-- //gallery container -->
+    </section>
+    <!-- //gallery -->
+    <!-- designs -->
+    <div class="w3-agileits-interior-design pb-lg-5" id="section4">
+        <div class="container">
+            <div class="row w3ls-interior-design-grids py-5">
+                <div class="col-lg-6 w3ls-interior-design-grid-left">
+                    <figure class="effect-lexi">
+                        <img src="~/SourcesHome/images/g1.jpg" alt="" class="img-fluid" />
+                        <figcaption>
+                            <h2>
+                                Responsive
+                                <span>Design</span>
+                            </h2>
+                            <p>If you think math is hard, try web design.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6 w3ls-interior-design-grid-right">
+                    <h2 class="mt-4">
+                        Better ways to create
+                        <span>Design</span>
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum.
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et veniam.
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="row w3ls-interior-design-grids py-5">
+                <div class="col-lg-6 w3ls-interior-design-grid-right">
+                    <h2>
+                        Better ways to create
+                        <span>Design</span>
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum.
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et veniam.
+                        </span>
+                    </p>
+                </div>
+                <div class="col-lg-6 w3ls-interior-design-grid-left">
+                    <figure class="effect-lexi">
+                        <img src="~/SourcesHome/images/g4.jpg" alt="" class="img-fluid mt-4" />
+                        <figcaption>
+                            <h2>
+                                Creative
+                                <span>Design</span>
+                            </h2>
+                            <p>Technology over technique produces emotionless design.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row w3ls-interior-design-grids py-5">
+                <div class="col-lg-6 w3ls-interior-design-grid-left">
+                    <figure class="effect-lexi">
+                        <img src="~/SourcesHome/images/g5.jpg" alt="" class="img-fluid" />
+                        <figcaption>
+                            <h2>
+                                Website
+                                <span>Design</span>
+                            </h2>
+                            <p>Good design is obvious. Great design is transparent.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6 w3ls-interior-design-grid-right">
+                    <h2 class="mt-4">
+                        Better ways to create
+                        <span>Design</span>
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum.
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et veniam.
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <!-- /-designs -->
+    <!-- video starts here -->
+    <div data-vide-bg="video/meeting">
+        <div class="center-container py-4 py-sm-5">
+            <div class="w3ls-video-info py-lg-5">
+                <div class="container">
+                    <h1 class="heading1">
+                        What separates design from art is that design is meant to be...
+                        <br>functional.
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut risus eget libero finibus facilisis.
+                        Phasellus tempus hendrerit sem ut tempus sem.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <!-- video ends here -->
+    <!-- team starts here -->
+    <div class="container content text-center py-5" id="section5">
+        <header class="w3-heading py-lg-5 pb-md-5 pb-4">
+            <h2>Our Great Team</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </header>
+        <!-- //end heading -->
+
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="team-members">
+                    <div class="team-avatar">
+                        <img class="img-fluid" src="~/SourcesHome/images/member1.jpg" alt="">
+                    </div>
+                    <div class="team-desc">
+                        <h4>Member 1</h4>
+                        <span>Marketing</span>
+                        <ul class="d-flex justify-content-center py-3 social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="mx-3">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="team-members">
+                    <div class="team-avatar">
+                        <img class="img-fluid" src="~/SourcesHome/images/member2.jpg" alt="">
+                    </div>
+                    <div class="team-desc">
+                        <h4>Member 2</h4>
+                        <span>Founder</span>
+                        <ul class="d-flex justify-content-center py-3 social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="mx-3">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 offset-sm-3 offset-md-0">
+                <div class="team-members">
+                    <div class="team-avatar">
+                        <img class="img-fluid" src="~/SourcesHome/images/member3.jpg" alt="">
+                    </div>
+                    <div class="team-desc">
+                        <h4>Member 3</h4>
+                        <span>Director</span>
+                        <ul class="d-flex justify-content-center py-3 social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="mx-3">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //end row -->
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="team-members">
+                    <div class="team-avatar">
+                        <img class="img-fluid" src="~/SourcesHome/images/member4.jpg" alt="">
+                    </div>
+                    <div class="team-desc">
+                        <h4>Member 4</h4>
+                        <span>Marketing</span>
+                        <ul class="d-flex justify-content-center py-3 social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="mx-3">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="team-members">
+                    <div class="team-avatar">
+                        <img class="img-fluid" src="~/SourcesHome/images/member5.jpg" alt="">
+                    </div>
+                    <div class="team-desc">
+                        <h4>Member 5</h4>
+                        <span>Founder</span>
+                        <ul class="d-flex justify-content-center py-3 social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="mx-3">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 offset-sm-3 offset-md-0">
+                <div class="team-members">
+                    <div class="team-avatar">
+                        <img class="img-fluid" src="~/SourcesHome/images/member6.jpg" alt="">
+                    </div>
+                    <div class="team-desc">
+                        <h4>Member 6</h4>
+                        <span>Director</span>
+                        <ul class="d-flex justify-content-center py-3 social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="mx-3">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //end row -->
+    </div>
+    <!-- team ends here -->
+    <!-- stats -->
+    <section class="stats_test pb-5 container-fluid">
+        <div class="row inner_stat_wthree_agileits">
+            <div class="col-md-3 col-sm-6 py-5 stats_info counter_grid">
+                <i class="far fa-building"></i>
+                <p class="counter">145</p>
+                <label class="mx-auto"></label>
+                <h4>Branches</h4>
+            </div>
+            <div class="col-md-3 col-sm-6 py-5 stats_info counter_grid1">
+                <i class="fas fa-users"></i>
+                <p class="counter">165</p>
+                <label class="mx-auto"></label>
+                <h4>Qualified Members</h4>
+            </div>
+            <div class="col-md-3 col-sm-6 py-5 stats_info counter_grid2">
+                <i class="far fa-edit"></i>
+                <p class="counter">563</p>
+                <label class="mx-auto"></label>
+                <h4>Projects Done</h4>
+            </div>
+            <div class="col-md-3 col-sm-6 py-5 stats_info counter_grid3">
+                <i class="far fa-smile"></i>
+                <p class="counter">1045</p>
+                <label class="mx-auto"></label>
+                <h4>Happy Customers</h4>
+            </div>
+        </div>
+    </section>
+    <!-- /stats -->
+    <!-- news starts here -->
+    <section class="news pb-5" id="section6">
+        <div class="container">
+            <header class="w3-heading py-lg-5 pb-md-5 pb-4 text-center">
+                <h2>Our News</h2>
+                <p>Lorem Ipsum is simply dummy text and typesetting industry.</p>
+            </header>
+            <!-- //end heading -->
+            <div class="card-columns">
+                <div class="card">
+                    <img class="card-img-top" src="~/SourcesHome/images/g9.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">News title goes here</h5>
+                        <p class="card-text">
+                            This is a longer card with supporting text below as a natural lead-in to additional content. This
+                            content is a little bit longer.
+                        </p>
+                        <a href="#" class="btn more p-0 mt-3" data-toggle="modal" data-target="#exampleModal">Read More</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Title goes here</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img class="card-img-top" src="~/SourcesHome/images/g9.jpg" alt="Card image cap">
+                                        <p class="my-3">
+                                            This is a longer card with supporting text below as a natural lead-in to additional
+                                            content. This content is a little bit longer. There are many variations of passages
+                                            of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                                            by injected humour, or randomised words which don't look even slightly believable.
+                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
+                                            on the Internet tend to repeat predefined chunks as necessary, making this the
+                                            first true generator on the Internet. It uses a dictionary of over 200 Latin
+                                            words, combined with a handful of model sentence structures, to generate Lorem
+                                            Ipsum which free from etc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Modal -->
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="~/SourcesHome/images/landscape-5101153_1920.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">News title goes here</h5>
+                        <p class="card-text">
+                            This is a longer card with supporting text below as a natural lead-in to additional content. This
+                            content is a little bit longer.
+                        </p>
+                        <a href="#" class="btn more p-0 mt-3" data-toggle="modal" data-target="#exampleModal2">Read More</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel2">Title goes here</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img class="card-img-top" src="~/SourcesHome/images/landscape-5101153_1920.jpg" alt="Card image cap">
+                                        <p class="my-3">
+                                            This is a longer card with supporting text below as a natural lead-in to additional
+                                            content. This content is a little bit longer. There are many variations of passages
+                                            of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                                            by injected humour, or randomised words which don't look even slightly believable.
+                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
+                                            on the Internet tend to repeat predefined chunks as necessary, making this the
+                                            first true generator on the Internet. It uses a dictionary of over 200 Latin
+                                            words, combined with a handful of model sentence structures, to generate Lorem
+                                            Ipsum which free from etc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Modal -->
+                    </div>
+                </div>
+                <div class="card p-3">
+                    <blockquote class="blockquote mb-0 card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="blockquote-footer mt-2">
+                            <small class="text-muted">
+                                Someone famous in
+                                <cite title="Source Title">Source Title</cite>
+                            </small>
+                            <a href="#" class="btn more p-0 mt-3" data-toggle="modal" data-target="#exampleModal3">Read More</a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel3">Title goes here</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="my-3">
+                                                This is a longer card with supporting text below as a natural lead-in to additional
+                                                content. This content is a little bit longer. There are many variations of
+                                                passages of Lorem Ipsum available, but the majority have suffered alteration
+                                                in some form, by injected humour, or randomised words which don't look even
+                                                slightly believable. If you are going to use a passage of Lorem Ipsum, you
+                                                need to be sure there isn't anything embarrassing hidden in the middle of
+                                                text. All the Lorem Ipsum generators on the Internet tend to repeat predefined
+                                                chunks as necessary, making this the first true generator on the Internet.
+                                                It uses a dictionary of over 200 Latin words, combined with a handful of
+                                                model sentence structures, to generate Lorem Ipsum which free from etc.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Modal -->
+                        </footer>
+                    </blockquote>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="~/SourcesHome/images/g3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">News title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </p>
+                        <a href="#" class="btn more p-0 mt-3" data-toggle="modal" data-target="#exampleModal4">Read More</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel4">Title goes here</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img class="card-img-top" src="~/SourcesHome/images/g3.jpg" alt="Card image cap">
+                                        <p class="my-3">
+                                            This is a longer card with supporting text below as a natural lead-in to additional
+                                            content. This content is a little bit longer. There are many variations of passages
+                                            of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                                            by injected humour, or randomised words which don't look even slightly believable.
+                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
+                                            on the Internet tend to repeat predefined chunks as necessary, making this the
+                                            first true generator on the Internet. It uses a dictionary of over 200 Latin
+                                            words, combined with a handful of model sentence structures, to generate Lorem
+                                            Ipsum which free from etc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Modal -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">News title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </p>
+                        <a href="#" class="btn more p-0 mt-3" data-toggle="modal" data-target="#exampleModal5">Read More</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel5">Title goes here</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="my-3">
+                                            This is a longer card with supporting text below as a natural lead-in to additional
+                                            content. This content is a little bit longer. There are many variations of passages
+                                            of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                                            by injected humour, or randomised words which don't look even slightly believable.
+                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
+                                            on the Internet tend to repeat predefined chunks as necessary, making this the
+                                            first true generator on the Internet. It uses a dictionary of over 200 Latin
+                                            words, combined with a handful of model sentence structures, to generate Lorem
+                                            Ipsum which free from etc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Modal -->
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img" src="~/SourcesHome/images/g11.jpg" alt="Card image">
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">News title</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This
+                            card has even longer content than the first to show that equal height action.
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </p>
+                        <a href="#" class="btn more p-0 mt-3" data-toggle="modal" data-target="#exampleModal6">Read More</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel6">Title goes here</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img class="card-img-top" src="~/SourcesHome/images/g11.jpg" alt="Card image cap">
+                                        <p class="my-3">
+                                            This is a longer card with supporting text below as a natural lead-in to additional
+                                            content. This content is a little bit longer. There are many variations of passages
+                                            of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                                            by injected humour, or randomised words which don't look even slightly believable.
+                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
+                                            on the Internet tend to repeat predefined chunks as necessary, making this the
+                                            first true generator on the Internet. It uses a dictionary of over 200 Latin
+                                            words, combined with a handful of model sentence structures, to generate Lorem
+                                            Ipsum which free from etc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Modal -->
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="~/SourcesHome/images/g5.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">News title goes here</h5>
+                        <p class="card-text">
+                            This is a longer card with supporting text below as a natural lead-in to additional content. This
+                            content is a little bit longer.
+                        </p>
+                        <a href="#" class="btn more p-0 mt-3" data-toggle="modal" data-target="#exampleModal7">Read More</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel7" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel7">Title goes here</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img class="card-img-top" src="~/SourcesHome/images/g5.jpg" alt="Card image cap">
+                                        <p class="my-3">
+                                            This is a longer card with supporting text below as a natural lead-in to additional
+                                            content. This content is a little bit longer. There are many variations of passages
+                                            of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                                            by injected humour, or randomised words which don't look even slightly believable.
+                                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                                            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
+                                            on the Internet tend to repeat predefined chunks as necessary, making this the
+                                            first true generator on the Internet. It uses a dictionary of over 200 Latin
+                                            words, combined with a handful of model sentence structures, to generate Lorem
+                                            Ipsum which free from etc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Modal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- news ends here -->
+    <!-- Testimonials Section -->
+    <section class="testimonials content-section" id="section7">
+        <div class="container">
+            <header class="w3-heading py-lg-5 pt-5 text-center">
+                <h2 class="text-white">Testimonials</h2>
+                <p class="diff">Lorem Ipsum is simply dummy text and typesetting industry.</p>
+            </header>
+            <!-- //end heading -->
+            <div class="row text-center">
+
+                <div class="col-md-8 offset-md-2">
+                    <div class="client-testimonials owl-carousel owl-theme">
+
+                        <div class="item">
+                            <p class="speech">
+                                It is a long established fact that a reader will be distracted by the readable content of a page
+                                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                                normal distribution of letters, as opposed to using 'Content here, content here', making
+                                it look like readable English.
+                            </p>
+                            <div class="client-info">
+                                <img src="~/SourcesHome/images/member1.jpg" alt="" />
+                                <h4>Smith Stone</h4>
+                                <span>Sed amet Productions</span>
+                            </div>
+                        </div>
+                        <!-- /.item -->
+
+                        <div class="item">
+                            <p class="speech">
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+                                a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
+                                Latin words, consectetur.
+                            </p>
+                            <div class="client-info">
+                                <img src="~/SourcesHome/images/member3.jpg" alt="" />
+                                <h4>John Doe</h4>
+                                <span>Dolor Associates</span>
+                            </div>
+                        </div>
+                        <!-- /.item -->
+
+                        <div class="item">
+                            <p class="speech">
+                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
+                                in their exact original form.
+                            </p>
+                            <div class="client-info">
+                                <img src="~/SourcesHome/images/member4.jpg" alt="" />
+                                <h4>Andrew Hill</h4>
+                                <span>Lorem ipsum Inc.</span>
+                            </div>
+                        </div>
+                        <!-- /.item -->
+
+                    </div>
+                    <!-- /.client-testimonials -->
+                </div>
+                <!-- /.col-md-8 -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /#testimonials -->
+    <!-- Contact section -->
+    <section class="contact content-section" id="section8">
+        <div class="container">
+            <header class="w3-heading py-lg-5 pt-5 text-center">
+                <h2>Contact Us</h2>
+                <p>Lorem Ipsum is simply dummy text and typesetting industry.</p>
+            </header>
+            <!-- //end heading -->
+            <div class="row form-container py-3">
+
+                <div class="col-md-8 contact-form">
+                    <h4 class="mb-4">Drop us a line</h4>
+                    <form id="contactForm" method="post" action="#">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name..." value="" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your email..." value="" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone..." value="" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="4" name="message" placeholder="Your message..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" name="submit" class="btn btn-default">
+                                <i class="fa fa-paper-plane fa-fw"></i> Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.contact-form -->
+
+                <div class="col-md-4 agile-w3ls-contact-address mt-sm-4 mt-0">
+                    <h4 class="mb-4">Our address</h4>
+                    <address>
+                        <p class="my-3 d-flex">
+                            <i class="fa fa-map-marker fa-fw mr-2"></i>
+                            <label>56th lorem, New York, ipsum sed, United States</label>
+                        </p>
+                        <ul>
+                            <li class="my-3">
+                                <i class="fa fa-envelope fa-fw mr-2"></i>
+                                <a href="mailto:info@example.com">example.com</a>
+                            </li>
+                            <li class="my-3">
+                                <i class="fa fa-phone fa-fw mr-2"></i>+56 (0) 985 0011 002
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <!-- /.contact-address -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+
+        <div class="container-fluid w3-agile-google-map pt-5">
+            <div class="row">
+                <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798893698!2d-74.25986762659859!3d40.697670067978756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1522490274976"
+                        style="border:0" allowfullscreen></iframe>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container py-5">
+
+            <div class="row text-center">
+                <div class="col-md-12 w3-social segment">
+                    <h4>Stay Connected</h4>
+                    <ul class="social-icons d-flex justify-content-center">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.col-md-12 -->
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+
+        <div class="w3l-copynote py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>
+                            &copy; 2018. Universe. All rights reserved | Design by
+                            <a href="http://w3layouts.com">W3layouts</a>
+                        </p>
+                    </div>
+                    <!-- /.col-md-12 -->
+
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.copynote -->
+
+        <a href="#" id="toTop" style="display: block;">
+            <span id="toTopHover" style="opacity: 1;"> </span>
+        </a>
+    </footer>
+    <!-- /.footer -->
+
+    <script src="~/SourcesHome/js/jquery-3.2.1.min.js"></script>
+    <script src="~/SourcesHome/js/index.js"></script>
+    <!-- stats -->
+    <script src="~/SourcesHome/js/jquery.waypoints.min.js"></script>
+    <script src="~/SourcesHome/js/jquery.countup.js"></script>
+
+    <!-- owl carousel -->
+    <script src="~/SourcesHome/js/owl.carousel.js"></script>
+
+    <!-- start-smooth-scrolling -->
+    <script src="~/SourcesHome/js/move-top.js"></script>
+    <script src="~/SourcesHome/js/easing.js"></script>
+
+    <!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
+    <script src="~/SourcesHome/js/jquery-1.7.2.js"></script>
+    <script src="~/SourcesHome/js/jquery.quicksand.js"></script>
+    <script src="~/SourcesHome/js/script.js"></script>
+    <script src="~/SourcesHome/js/jquery.prettyPhoto.js"></script>
+    <!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
+
+
+    <script src="~/SourcesHome/js/bootstrap.js"></script>
+    <!-- video js file -->
+    <script src="~/SourcesHome/js/jquery.vide.min.js"></script>
+    <!-- /video js file -->
+    <!-- custom js file -->
+    <script src="~/SourcesHome/js/universe.js"></script>
+    <!-- /custom js file -->
+
+</body>
+
+</html>
